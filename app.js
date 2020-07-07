@@ -15,6 +15,8 @@ mongoose.connect(process.env.DATABASE_URL, {
   useUnifiedTopology: true,
 });
 
+app.use(bodyParser.json());
+
 app.use(logger("dev"));
 app.use(bodyParser.json());
 app.use(cookieParser());
